@@ -2,7 +2,7 @@
   <div>
     <div v-for="article in articles">
       <h2>{{ article.title }}</h2>
-      <h4 class="small"><small>By {{article.author.username }}</small></h4>
+      <h4 class="small"><small>By {{article.author }}</small></h4>
       <h4 class="small"><small>Created on {{article.createdAt }}</small></h4>
       <p class="content" v-for="content in article.articleContent.split('\n')">{{ content }}</p>
       <p>{{ article.category }}</p>

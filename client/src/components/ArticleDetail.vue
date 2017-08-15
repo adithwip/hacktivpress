@@ -15,11 +15,6 @@
     <div class="row">
       <div class="col-10">
       </div>
-      <div class="col-2" v-if="user._id === article.author._id">
-        <i class="fa fa-trash buttonme" aria-hidden="true" @click="doRemove" style="color: red"></i>
-        <i class="fa fa-pencil-square-o buttonme" aria-hidden="true" @click="editArticle"></i>
-
-      </div>
     </div>
     </div>
   </div>
@@ -40,32 +35,12 @@ export default {
       .then(response => {
         self.article = response.data
       })
-    },
-    doRemove () {
-      var self = this
-      let id = self.$route.query.id
-      if (window.confirm('Are you sure?')) {
-        this.axios.delete(`http://localhost:3000/api/articles/${id}`, {
-          token: localStorage.getItem('token')
-        })
-        .then(response => {
-          console.log(response)
-          self.$store.dispatch('getArticles')
-          self.$router.push('/')
-        })
-      }
-    },
-    editArticle () {
-
     }
   },
   computed: {
     user () {
       return this.$store.getters.user
     }
-  },
-  created () {
-    this.getArticle()
   }
 }
 </script>

@@ -11,10 +11,9 @@
 export default {
   data () {
     return {
-      text: '',
-      selection: ''
-      }]
-    }
+      
+      }
+    
   },
   computed: {
     articles () {
