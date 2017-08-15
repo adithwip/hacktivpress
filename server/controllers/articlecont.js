@@ -22,7 +22,7 @@ let create = (req, res) => {
         title: req.body.title,
         articleContent: req.body.articleContent,
         category: req.body.category,
-        author: req.body.creator,
+        author: req.body.author,
         createdAt: new Date()
     })
     newArticle.save((err, article) => {

@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <p class="content">{{ content }}</p>
+        <p class="content">{{ article.articleContent }}</p>
         <p>by {{ article.author }}</p>
         <p>{{article.category}}</p>
       </div>

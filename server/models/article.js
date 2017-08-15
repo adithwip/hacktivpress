@@ -10,10 +10,10 @@ var articleSchema = new Schema({
         type: String,
         required: true
     },
-    category: [String],
-    author: { type: Schema.Types.ObjectId, ref: 'User' },
-    createdAt: Date,
-    updatedAt: Date
+    category: [
+        String
+    ],
+    author: { type: Schema.Types.ObjectId, ref: 'User' }
 })
 
 var Article = mongoose.model('Article', articleSchema);
