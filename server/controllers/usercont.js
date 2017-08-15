@@ -56,7 +56,7 @@ let userData = (req, res) => {
             res.send(decoded)
         })
     } else {
-        res.send({ msg: 'Not logged in' })
+        res.send({ msg: 'You are not logged in' })
     }
 }
 
@@ -72,7 +72,7 @@ let userInfo = (req, res, next) => {
             }
         })
     } else {
-        res.send({ msg: 'Not logged in' })
+        res.send({ msg: 'You are not logged in' })
     }
 }
 
