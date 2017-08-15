@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-12">
         <p class="content" v-for="content in article.articleContent.split('\n')">{{ content }}</p>
-        <p>by {{ article.author.username }}</p>
+        <p>by {{ article.author }}</p>
         <p>{{article.category}}</p>
       </div>
     </div>

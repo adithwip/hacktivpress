@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="container">
     <div class="row">
-      <h1>Welcome to Hacktivpress</h1>
+      <h1>Hacktivpress</h1>
     </div>
     <div class="row content">
       <div class="col-3">
-        <h4>Article List</h4>
+        <h4>Articles List</h4>
         <ArticleList></ArticleList>
       </div>
       <div class="col-9">
