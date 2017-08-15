@@ -16,13 +16,18 @@ export const store = new Vuex.Store({
         },
         getUser(state, payload) {
             state.user = payload
-        }
+        },
         logout(state) {
             state.user = ''
         }
     },
     actions: {
-
+        getArticles(store) {
+            axios.get('http://localhost:3000/api/articles')
+                .then(response => {
+                    store.commit('getArticles', response.data)
+                })
+        },
         getUser(store) {
             axios.post('http://localhost:3000/userdata', {
                     token: localStorage.getItem('token')
@@ -32,5 +37,12 @@ export const store = new Vuex.Store({
                 })
         }
     },
-
+    getters: {
+        articles(state) {
+            return state.articles
+        },
+        user(state) {
+            return state.user
+        }
+    }
 })
